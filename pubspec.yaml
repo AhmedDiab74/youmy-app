@@ -1,0 +1,58 @@
+name: merchant
+description: A new Flutter project.
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.2.3 <4.0.0"
+
+dependencies:
+  bloc: ^8.1.4
+  country_code_picker: ^3.0.0
+  cupertino_icons: ^1.0.2
+  dio: ^5.6.0
+  flutter:
+    sdk: flutter
+  flutter_bloc: ^8.1.6
+  flutter_rating_bar: ^4.0.0
+  flutter_svg: ^2.0.10+1
+  fluttertoast: ^8.0.9
+  image_picker: ^1.1.2
+  provider: ^6.0.2
+  share_plus: ^10.0.2
+  shared_preferences: ^2.0.15
+  timelines: ^0.1.0
+  url_launcher: ^6.1.2
+
+dev_dependencies:
+  flutter_lints: ^4.0.0
+  flutter_test:
+    sdk: flutter
+
+flutter:
+
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/icons/
+
+  fonts:
+    - family: Roboto Black
+      fonts:
+        - asset: assets/fonts/Roboto-Black.ttf
+
+    - family: Roboto Regular
+      fonts:
+        - asset: assets/fonts/Roboto-Regular.ttf
+
+    - family: Roboto Bold
+      fonts:
+        - asset: assets/fonts/Roboto-Bold.ttf
+
+    - family: Roboto Italic
+      fonts:
+        - asset: assets/fonts/Roboto-Italic.ttf
+
+    - family: Roboto Medium
+      fonts:
+        - asset: assets/fonts/Roboto-Medium.ttf
