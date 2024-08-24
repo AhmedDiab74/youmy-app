@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -24,12 +26,12 @@ Future<void> main() async {
   // var x = await apiService.post(endPoint: "tokens", data: {"userNameOrEmail": "admin", "password": "123Pa\$\$word!"},headers: {
   //   "Tenant":"root"
   // });
-  print('==================${x}=============');
+  log('==================$x=============');
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   // This widget is the root of your application.
   @override
@@ -40,14 +42,15 @@ class MyApp extends StatelessWidget {
     ]);
     return MultiBlocProvider(
       providers: [
-         BlocProvider(
-    create: (context) =>
-        StoreBranchesCubit(StoreBranchesRepoImp(apiService))..showBranches(),
-  ),
-         BlocProvider(
-    create: (context) =>
-        ProductCubit(BranchProductRepoImp(apiService))..showProducts(),
-  ),
+        BlocProvider(
+          create: (context) =>
+              StoreBranchesCubit(StoreBranchesRepoImp(apiService))
+                ..showBranches(),
+        ),
+        BlocProvider(
+          create: (context) =>
+              ProductCubit(BranchProductRepoImp(apiService))..showProducts(),
+        ),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
